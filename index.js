@@ -94,3 +94,32 @@ function placeOrder(creditNum){
  }
 }
 
+function removeFromCart(item){
+   //Convert item to string first if not a string, so that hasOwnProperty willl work
+  if(typeof item !== "string") {
+    item = String(item);
+  }
+//loop check and delete
+//Actually I should make another list of keys then delete from the cart[] using   delete Obj[key]; so the [i] isn't changed with each deletion
+  const cL=cart.length // does this mean CL will stay same 
+  const copyCart= cart 
+  let counter=0 
+  for(let i=0; i < cL; i++) {
+// since not search by price, I should probably separate the keys out of cart first.
+    // may need to iterate through
+    let itemObject = copyCart[i]
+    console.log(itemObject)
+    let checkThru = itemObject.hasOwnProperty(item); 
+    console.log(checkThru);
+    if (checkThru === true){ 
+    cart.splice(i,1)
+    counter= counter + 1
+    }  
+  }// end of loop
+// let checkThru = itemObject.hasOwnProperty(item);
+ if (counter===0 ){
+   console.log("That item is not in your cart.");
+ }
+
+ return cart  
+}
