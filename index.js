@@ -107,7 +107,7 @@ function removeFromCart(item){
   for(let i=0; i < cL; i++) {
 // since not search by price, I should probably separate the keys out of cart first.
     // may need to iterate through
-    let itemObject = copyCart[i]
+    //let itemObject = copyCart[i]
     console.log(itemObject)
     let checkThru = itemObject.hasOwnProperty(item); 
     console.log(checkThru);
