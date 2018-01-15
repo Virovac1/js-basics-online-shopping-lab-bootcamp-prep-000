@@ -81,38 +81,6 @@ function viewCart() {
   return sumPrices
 }// end of total function 
 
-/* 
-function removeFromCart(item){
-   //Convert item to string first if not a string, so that hasOwnProperty willl work
-  if(typeof item !== "string") {
-    item = String(item);
-  }
-//loop check and delete
-//Actually I should make another list of keys then delete from the cart[] using   delete Obj[key]; so the [i] isn't changed with each deletion
-  let itemKeys=[]
-  let i =0 ;
-  let counter=0;
-  let cL=cart.length
-  for(i=0; i < cL; i++) {
-// since not search by price, I should probably separate the keys out of cart first
-    let itemObject = cart[i]; // each object has price property
-    let itemKey = Object.keys(itemObject)[0] ;
-    console.log(itemKey)
-    let checkThru = itemKey.hasOwnProperty(item);
-    if (checkThru === true){ 
-    console.log(checkThru)
-    delete cart[item];
-    counter = counter + 1
-    }  
-  }// end of loop
- 
- if (counter===0 ){
-   console.log("That item is not in your cart.");
- }
- 
- return cart  
-}
-*/
 
 function placeOrder(creditNum){
    if  ( (typeof creditNum) !== "number"){
@@ -125,3 +93,4 @@ function placeOrder(creditNum){
    return cart 
  }
 }
+
