@@ -101,7 +101,6 @@ function removeFromCart(item){
   }
 //loop check and delete
 //Actually I should make another list of keys then delete from the cart[] using   delete Obj[key]; so the [i] isn't changed with each deletion
-  const cL=cart.length // does this mean CL will stay same 
   const copyCart= cart 
   let counter=0 
   for(let i=0; i < cart.length; i++) {
