@@ -104,10 +104,10 @@ function removeFromCart(item){
   const cL=cart.length // does this mean CL will stay same 
   const copyCart= cart 
   let counter=0 
-  for(let i=0; i < cL; i++) {
+  for(let i=0; i < cart.length; i++) {
 // since not search by price, I should probably separate the keys out of cart first.
     // may need to iterate through
-    //let itemObject = copyCart[i]
+    let itemObject = cart[i]
     console.log(itemObject)
     let checkThru = itemObject.hasOwnProperty(item); 
     console.log(checkThru);
